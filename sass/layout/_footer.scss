@@ -1,0 +1,181 @@
+.footer {
+  background-color: $color-dark;
+  color: $color-white;
+  text-transform: capitalize;
+  overflow: hidden;
+
+  .backdrop {
+    position: relative;
+    width: 100%;
+
+    @include respond(phone) {
+      display: none;
+    }
+
+    img {
+      width: 40rem;
+
+      &:nth-child(1) {
+        position: absolute;
+        left: -8%;
+        transform: rotate(45deg);
+        // z-index: 1;
+      }
+
+      &:nth-child(2) {
+        position: absolute;
+        right: -8%;
+        transform: rotate(-45deg);
+        // z-index: 1;
+      }
+    }
+  }
+
+  &__top {
+    @include width;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding-top: 10rem;
+    padding-bottom: 15rem;
+    border-bottom: 0.2rem $color-light-gray solid;
+
+    @include respond(phone) {
+      padding-bottom: 11rem;
+    }
+
+    strong {
+      color: $color-white;
+    }
+
+    h2 {
+      color: $color-white;
+    }
+
+    .cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 5rem;
+
+      @include respond(phone) {
+        flex-direction: column;
+      }
+
+      :nth-of-type(2) {
+        background-color: $color-white;
+        color: $color-dark;
+      }
+    }
+  }
+
+  &__bottom {
+    @include width;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .left {
+      @include respond(phone) {
+        margin-bottom: 5rem;
+      }
+
+      h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+
+    .right {
+      display: flex;
+      gap: 10rem;
+
+      @include respond(phone) {
+        flex-direction: column;
+        gap: 0rem;
+
+        &_1 {
+          margin-bottom: 2rem;
+        }
+
+        &_2 {
+          margin-bottom: 2rem;
+        }
+      }
+
+      h4 {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+      }
+
+      a {
+        text-decoration: none;
+        color: $color-white;
+        font-size: 1.5rem;
+
+        &:hover {
+          color: $color-orangered;
+        }
+      }
+
+      li {
+        list-style: none;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  &__foot {
+    @include width;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 6rem;
+    font-size: 1.5rem;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+
+    .left {
+      flex: 1.55;
+
+      @include respond(tab-land) {
+        flex: 1.4;
+      }
+
+      @include respond(tab-port) {
+        flex: 1;
+      }
+
+      @include respond(phone) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .right {
+      flex: 1;
+      display: flex;
+      gap: 3rem;
+
+      @include respond(phone) {
+        flex: none;
+      }
+    }
+  }
+}

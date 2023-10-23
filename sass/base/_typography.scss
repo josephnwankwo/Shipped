@@ -1,0 +1,168 @@
+.heading-primary {
+  font-size: 8rem;
+  color: $color-dark;
+  text-transform: uppercase;
+
+  span {
+    color: $color-orangered;
+  }
+
+  @include respond(tab-land) {
+    font-size: 7.5rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: 6.5rem;
+  }
+
+  @include respond(phone) {
+    font-size: 5.5rem;
+  }
+}
+
+.heading-secondary {
+  font-size: 6rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: $color-dark;
+
+  span {
+    color: $color-orangered;
+  }
+
+  @include respond(tab-land) {
+    font-size: 5.5rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: 4.5rem;
+  }
+
+  @include respond(phone) {
+    font-size: 3.5rem;
+  }
+}
+
+.heading-tertiary {
+  font-size: 6rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: $color-dark-black;
+  margin-bottom: 1rem;
+
+  span {
+    color: $color-orangered;
+  }
+
+  @include respond(tab-land) {
+    font-size: 5.5rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: 4rem;
+  }
+
+  @include respond(phone) {
+    font-size: 3rem;
+  }
+}
+
+.heading-tertiary-sub {
+  font-size: 3rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+  color: $color-dark-gray;
+
+  @include respond(tab-land) {
+    font-size: 2.5rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: 2rem;
+  }
+
+  @include respond(phone) {
+    font-size: 1.5rem;
+  }
+}
+
+.paragraph {
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: $color-dark-gray;
+  line-height: 1.6;
+
+  @include respond(tab-land) {
+    font-size: 1.7rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: 1.6rem;
+  }
+
+  @include respond(phone) {
+    font-size: 1.5rem;
+  }
+}
+
+.btn {
+  font-size: 2rem;
+  text-decoration: none;
+  color: $color-white;
+  background-color: $color-orangered;
+  padding: 1.5rem 2.5rem;
+  border-radius: 3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+
+  &:hover {
+    box-shadow: 0 7px 3rem rgba($color-black, 0.2);
+  }
+
+  span {
+    padding-left: 1rem;
+  }
+
+  @include respond(tab-land) {
+    font-size: 1.8rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: 1.6rem;
+  }
+
+  @include respond(phone) {
+    font-size: 1.4rem;
+  }
+}
+
+#checkbox {
+  display: none;
+
+  &:checked ~ .navigation-button .navigation-icon {
+    background-color: transparent;
+  }
+
+  &:checked ~ .navigation-button .navigation-icon::before {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+
+  &:checked ~ .navigation-button .navigation-icon::after {
+    bottom: 40%;
+    transform: rotate(45deg);
+  }
+
+  &:checked ~ .navigation__list {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%);
+  }
+
+  // &:checked + .head .label {
+  //   transform: rotate(-20deg);
+  // }
+}

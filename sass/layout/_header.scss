@@ -1,0 +1,66 @@
+.header {
+  @include respond(phone) {
+    margin-bottom: 5rem;
+  }
+  &__about {
+    text-align: center;
+
+    h1 {
+      width: min(95vw, 135rem);
+      margin: 5rem auto 2rem;
+    }
+
+    p {
+      width: min(70vw, 135rem);
+      margin: 0 auto;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__core {
+    @include width;
+    height: min(110vh, 50rem);
+    margin-top: 8rem;
+    overflow: hidden;
+    background-image: url(/images/img/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border-radius: 1rem;
+
+    @include respond(phone) {
+      display: none;
+    }
+
+    &-container {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      background-color: $color-light-black;
+      color: $color-white;
+      padding: 1rem 3rem;
+
+      display: flex;
+      align-items: center;
+      gap: 14rem;
+
+      @include respond(tab-port) {
+        gap: 5rem;
+      }
+
+      h2 {
+        font-size: 5rem;
+        font-weight: 500;
+      }
+
+      p {
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: $color-white;
+      }
+    }
+  }
+}
